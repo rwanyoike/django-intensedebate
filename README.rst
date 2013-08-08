@@ -16,7 +16,7 @@ Installation
 
 #. Add the ``intensedebate`` directory to your Python path. Using ``pip``::
 
-       pip install git+https://bitbucket.org/raymondwanyoike/django-intensedebate.git#egg=django-intensedebate
+       pip install "git+https://bitbucket.org/raymondwanyoike/django-intensedebate.git#egg=django-intensedebate"
 
 #. Add ``intensedebate`` to your ``INSTALLED_APPS`` setting::
 
