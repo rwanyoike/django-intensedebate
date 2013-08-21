@@ -1,0 +1,10 @@
+<script>
+  var idcomments_acct = '{{ idcomments_acct }}';
+  var idcomments_post_id = '{{ idcomments_post_id }}';
+  {% if idcomments_post_url %}
+    var idcomments_post_url = '{{ idcomments_post_url }}';
+  {% else %}
+    var idcomments_post_url;
+  {% endif %}
+</script>
+
