@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-intensedebate',
-    version='1.0.0',
+    version='0.5.0',
     description='Simple integration of the IntenseDebate comment widget in Django projects.',
     author='Raymond Wanyoike',
     author_email='raymond.wanyoike@gmail.com',
