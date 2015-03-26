@@ -116,7 +116,7 @@ Example
 
       <div id="idc-container-parent"></div>
 
-      <!-- Placed at the end of the document so the page load faster -->
+      <!-- Placed at the end of the document so the pages load faster -->
       {% intensedebate_load %}
     </body>
 
