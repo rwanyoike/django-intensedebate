@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-intensedebate",
-    version="0.5.0",
+    version="0.6.0",
     author="Raymond Wanyoike",
     author_email="raymond.wanyoike@gmail.com",
     url="https://github.com/raymondwanyoike/django-intensedebate/",
