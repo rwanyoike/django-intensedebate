@@ -19,12 +19,6 @@ Installation
 
         pip install django-intensedebate
 
-    Alternatively, if you want to install the sources directly off the repository:
-
-    .. code:: shell
-
-        pip install git+https://github.com/raymondwanyoike/django-intensedebate.git#egg=django-intensedebate
-
 #.  Add ``intensedebate`` to your ``INSTALLED_APPS`` setting:
 
     .. code:: python
