@@ -16,7 +16,7 @@ setup(
     license="GPLv3",
     packages=find_packages(),
     include_package_data=True,
-    keywords="django, intensedebate",
+    keywords="django, templatetag, intensedebate, comments",
     install_requires=[
         "Django>=1.4",
     ],
