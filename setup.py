@@ -5,18 +5,18 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-intensedebate",
-    version="0.6.0",
+    version="0.7.0",
     author="Raymond Wanyoike",
     author_email="raymond.wanyoike@gmail.com",
-    url="https://github.com/raymondwanyoike/django-intensedebate/",
+    url="https://github.com/raymondwanyoike/django-intensedebate",
     description="Simple integration of the IntenseDebate comment widget for " +
         "Django projects.",
     long_description=open("README.rst").read(),
-    download_url="https://github.com/raymondwanyoike/django-intensedebate/",
+    download_url="https://github.com/raymondwanyoike/django-intensedebate",
     license="GPLv3",
     packages=find_packages(),
     include_package_data=True,
-    keywords="django, intensedebate",
+    keywords="django, templatetag, intensedebate, comments",
     install_requires=[
         "Django>=1.4",
     ],
