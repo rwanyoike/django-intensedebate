@@ -5,35 +5,35 @@ from django.template import TemplateSyntaxError
 register = template.Library()
 
 
-@register.inclusion_tag("intensedebate/config_js.html")
-def intensedebate_config(intensedebate_acct=None, post_id=None, post_url=None,
-                         post_id_prefix="", post_id_suffix=""):
+@register.inclusion_tag("intensedebate/load_wrapper_js.html")
+def intensedebate_load(
+    intensedebate_acct=None,
+    post_id=None,
+    post_id_prefix="",
+    post_id_suffix="",
+    post_url=None,
+    post_title=None,
+    container_id=None):
 
     if intensedebate_acct is None:
         intensedebate_acct = getattr(settings, "INTENSEDEBATE_ACCT", None)
+        if intensedebate_acct is None:
+            raise TemplateSyntaxError("The `intensedebate_config` template " +
+                "tag requires a site account number. Either pass it as " +
+                "`intensedebate_acct`, or set `INTENSEDEBATE_ACCT` in your " +
+                "settings.")
 
-    if intensedebate_acct is None:
-        raise TemplateSyntaxError(
-            "The `intensedebate_config` template tag requires a " +
-            "`intensedebate_acct`. You must either pass it as an argument " +
-            "or set INTENSEDEBATE_ACCT in your settings.")
-
-    if post_id is None:
-        raise TemplateSyntaxError(
-            "The `intensedebate_config` template tag requires a `post_id`. " +
-            "You must pass it as an argument.")
-
-    return {
-        "idcomments_acct": intensedebate_acct,
-        "idcomments_post_id": "{}{}{}".format(
-            post_id_prefix, post_id, post_id_suffix),
-        "idcomments_post_url": post_url,
-    }
-
-
-@register.inclusion_tag("intensedebate/load_wrapper_js.html")
-def intensedebate_load():
-    return
+    context = {"idcomments_acct": intensedebate_acct}
+    if post_id:
+        context["idcomments_post_id"] = "{}{}{}".format(
+            post_id_prefix, post_id, post_id_suffix)
+    if post_url:
+        context["idcomments_post_url"] = post_url
+    if post_title:
+        context["idcomments_post_title"] = post_title
+    if container_id:
+        context["idcomments_div"] = container_id
+    return context
 
 
 @register.inclusion_tag("intensedebate/link_wrapper_js.html")
