@@ -33,9 +33,9 @@ Configuration
 
 The ``intensedebate_config`` template tag requires a site *account number*. Either pass it as ``intensedebate_acct``, or set ``INTENSEDEBATE_ACCT`` in your settings:
 
-  .. code:: python
+.. code:: python
 
-      INTENSEDEBATE_ACCT = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    INTENSEDEBATE_ACCT = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 The site *account number* can be found by visiting the `Site Key <http://intensedebate.com/sitekey>`_ page (**IntenseDebate site acct:**).
 
