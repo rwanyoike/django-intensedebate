@@ -1,3 +1,7 @@
+0.7
+=====
+- Support Django 1.6+
+
 0.6
 =====
 - Add GNU GPL v3.0 license
@@ -5,5 +9,5 @@
 - Update template tags
 
 0.5
-===
+=====
 - Initial release
