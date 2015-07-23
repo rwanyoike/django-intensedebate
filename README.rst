@@ -2,8 +2,7 @@
 django-intensedebate
 ====================
 
-A simple integration of the `IntenseDebate <http://intensedebate.com>`_ comment
-widget for Django projects.
+A simple integration of the `IntenseDebate <http://intensedebate.com>`_ comment widget for Django projects.
 
 Requirements
 ============
@@ -35,7 +34,6 @@ Installation
             'intensedebate',
         )
 
-
 Configuration
 =============
 
@@ -58,7 +56,7 @@ Basic Usage
 
         {% load intensedebate %}
 
-#.  Set the js config (API):
+#.  Set the config:
 
     .. code:: html
 
@@ -83,7 +81,7 @@ Basic Usage
 
         <div id="idc-container-parent"></div>
 
-#.  Load the js widget:
+#.  Load the widget:
 
     .. code:: html
 
@@ -95,7 +93,10 @@ Example
 
 .. code:: html
 
-    <!DOCTYPE HTML>{% load intensedebate %}
+    {% load intensedebate %}
+
+
+    <!DOCTYPE HTML>
 
     <html>
 
