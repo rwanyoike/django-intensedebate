@@ -1,3 +1,8 @@
+1.0
+=====
+- New widget options
+- Refactor template tags
+
 0.7
 =====
 - Support Django 1.6+
@@ -5,7 +10,6 @@
 0.6
 =====
 - Add GNU GPL v3.0 license
-- Update contributers list
 - Update template tags
 
 0.5
