@@ -2,8 +2,7 @@
 django-intensedebate
 ====================
 
-A simple integration of the `IntenseDebate <http://intensedebate.com>`_ comment
-widget for Django projects.
+A simple integration of the `IntenseDebate <http://intensedebate.com>`_ comment widget for Django projects.
 
 Requirements
 ============
@@ -20,12 +19,6 @@ Installation
 
         pip install django-intensedebate
 
-    Alternatively, if you want to install the sources directly off the repository:
-
-    .. code:: shell
-
-        pip install git+https://github.com/raymondwanyoike/django-intensedebate.git#egg=django-intensedebate
-
 #.  Add ``intensedebate`` to your ``INSTALLED_APPS`` setting:
 
     .. code:: python
@@ -35,19 +28,16 @@ Installation
             'intensedebate',
         )
 
-
 Configuration
 =============
 
-#.  The ``intensedebate_config`` template tag requires a ``intensedebate_acct``.
-    You must either pass it as an argument or set ``INTENSEDEBATE_ACCT`` in
-    your settings. Setting this value means that you can omit the ``intensedebate_acct``
-    argument when invoking the template tag:
+The ``intensedebate_config`` template tag requires a site *account number*. Either pass it as ``intensedebate_acct``, or set ``INTENSEDEBATE_ACCT`` in your settings:
 
-    .. code:: python
+  .. code:: python
 
-        INTENSEDEBATE_ACCT = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      INTENSEDEBATE_ACCT = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+The site *account number* can be found by visiting the `Site Key <http://intensedebate.com/sitekey>`_ page (**IntenseDebate site acct:**).
 
 Basic Usage
 ===========
@@ -58,7 +48,7 @@ Basic Usage
 
         {% load intensedebate %}
 
-#.  Set the js config (API):
+#.  Set the config:
 
     .. code:: html
 
@@ -83,7 +73,7 @@ Basic Usage
 
         <div id="idc-container-parent"></div>
 
-#.  Load the js widget:
+#.  Load the widget:
 
     .. code:: html
 
@@ -95,7 +85,10 @@ Example
 
 .. code:: html
 
-    <!DOCTYPE HTML>{% load intensedebate %}
+    {% load intensedebate %}
+
+
+    <!DOCTYPE HTML>
 
     <html>
 
@@ -116,7 +109,7 @@ Example
 
       <div id="idc-container-parent"></div>
 
-      <!-- Placed at the end of the document so the page load faster -->
+      <!-- Placed at the end of the document so the pages load faster -->
       {% intensedebate_load %}
     </body>
 
