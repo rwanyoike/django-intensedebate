@@ -31,7 +31,7 @@ Installation
 Configuration
 =============
 
-The ``intensedebate_config`` template tag requires a site *account number*. Either pass it as ``intensedebate_acct``, or set ``INTENSEDEBATE_ACCT`` in your settings:
+The ``intensedebate_load`` template tag requires a site *account number*. Either pass it as ``intensedebate_acct``, or set ``INTENSEDEBATE_ACCT`` in your settings:
 
 .. code:: python
 

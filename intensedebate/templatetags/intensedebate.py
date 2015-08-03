@@ -18,7 +18,7 @@ def intensedebate_load(
     if intensedebate_acct is None:
         intensedebate_acct = getattr(settings, "INTENSEDEBATE_ACCT", None)
         if intensedebate_acct is None:
-            raise TemplateSyntaxError("The `intensedebate_config` template " +
+            raise TemplateSyntaxError("The `intensedebate_load` template " +
                 "tag requires a site account number. Either pass it as " +
                 "`intensedebate_acct`, or set `INTENSEDEBATE_ACCT` in your " +
                 "settings.")
